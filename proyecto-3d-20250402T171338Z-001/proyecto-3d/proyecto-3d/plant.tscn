@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://brpp5t4mn5nff"]
+
+[ext_resource type="PackedScene" uid="uid://fjmackpck6ch" path="res://plant.FBX" id="1_t03al"]
+[ext_resource type="Script" uid="uid://byxxiv08c64hf" path="res://plant.gd" id="2_mbetm"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_mbetm"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_mbetm"]
+
+[node name="plant" instance=ExtResource("1_t03al")]
+script = ExtResource("2_mbetm")
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="plant_" index="0"]
+transform = Transform3D(1.49012e-07, 1, -5.77316e-14, 4.76837e-07, 5.96046e-08, 1, 1, -5.96047e-08, -3.8743e-07, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="plant_/CharacterBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0508547, 0.447935, 0)
+shape = SubResource("SphereShape3D_mbetm")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="plant_/CharacterBody3D" index="1"]
+transform = Transform3D(5.96046e-08, 3.8743e-07, 1, 1, 5.50571e-21, -1.49012e-07, -5.96046e-08, 1, -4.76837e-07, 0, 0, 0)
+mesh = SubResource("CapsuleMesh_mbetm")
+skeleton = NodePath("../..")

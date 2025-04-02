@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3 uid="uid://b2subvdd0qaot"]
+
+[ext_resource type="Script" uid="uid://dl63utvdw4cnq" path="res://menu_de_controels.gd" id="1_pta57"]
+[ext_resource type="Texture2D" uid="uid://eto5yyulx013" path="res://Captura de 2025-03-31 17-35-59.png" id="1_qiev1"]
+
+[node name="Menu de controels" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pta57")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(1442, 131)
+texture = ExtResource("1_qiev1")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Tornar" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Tornar al menu principal
+"
+
+[connection signal="pressed" from="VBoxContainer/Tornar" to="." method="_on_tornar_pressed"]

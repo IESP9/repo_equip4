@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bvp6ffxc47v6u"]
+
+[sub_resource type="Resource" id="Resource_vkdvt"]
+metadata/__load_path__ = "res://ImageToStl.com_reaper.fbx"
+
+[sub_resource type="Resource" id="Resource_7q7q3"]
+metadata/__load_path__ = "res://image_to_stl.com_reaper.gd"
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_bdt7c"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="ImageToStl_com_reaper" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.96801, 0, -1.20182)
+script = SubResource("Resource_7q7q3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ImageToStl_com_reaper"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.22088, 0)
+shape = SubResource("CapsuleShape3D_bdt7c")

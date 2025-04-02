@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dnhgcaew2rc8k"]
+
+[ext_resource type="Script" uid="uid://d1r0xdlbngmxj" path="res://Scenes/luces.gd" id="1_tt111"]
+
+[node name="luces" type="SpotLight3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
+script = ExtResource("1_tt111")
